@@ -1,0 +1,20 @@
+provisionDataStore:
+  cassandra: false
+
+allInOne:
+  enabled: true
+
+storage:
+  type: memory
+
+agent:
+  enabled: false
+
+collector:
+  enabled: true
+  extraEnv:
+    - name: COLLECTOR_OTLP_ENABLED
+      value: "true"
+
+query:
+  enabled: false

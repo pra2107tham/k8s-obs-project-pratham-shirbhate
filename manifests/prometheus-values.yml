@@ -1,0 +1,11 @@
+server:
+  extraScrapeConfigs: |
+    - job_name: "api-service-1"
+      metrics_path: "/metrics"
+      static_configs:
+        - targets: ["api-service-1.prod.svc.cluster.local:3001"]
+
+    - job_name: "api-service-2"
+      metrics_path: "/metrics"
+      static_configs:
+        - targets: ["api-service-2.prod.svc.cluster.local:3002"]
